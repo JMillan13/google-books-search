@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import API from "../utils/API";
 import Jumbotron from "../components/Jumbotron";
 import { Container} from "../components/Grid";
-import SavedResult from "../components/SavedResult"
-
+import SavedResult from "../components/SavedResults"
+const bg_color = {'backgroundColor' : 'd80001'}
 class SaveBook extends Component {
     state = {
         savedBooks: []
@@ -25,12 +25,14 @@ class SaveBook extends Component {
 
     render() {
         return (
+            <div style={bg_color}>
             <Container fluid className="container">
                 <Jumbotron />
                 <Container>
                     <SavedResult savedBooks={this.state.savedBooks} handleDeleteButton={this.handleDeleteButton} />
                 </Container>
             </Container>
+            </div>
         )
     }
 }

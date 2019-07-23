@@ -56,9 +56,9 @@ function registerValidSW(swUrl) {
 }
 
 function checkValidServiceWorker(swUrl) {
-
+  fetch(swUrl)
     .then(response => {
-     .
+
       if (
         response.status === 404 ||
         response.headers.get("content-type").indexOf("javascript") === -1

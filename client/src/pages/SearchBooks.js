@@ -2,10 +2,13 @@ import React, { Component } from "react";
 import API from "../utils/API";
 import Jumbotron from "../components/Jumbotron";
 import { Container, Row, Col } from "../components/Grid";
-import SearchForm from "../components/SearchForm";
-import SearchResult from "../components/SearchResult"
+import SearchForm from "../components/SearchForms";
+import SearchResult from "../components/SearchResults";
+import bgImg from "../img/bgImg.jpg";
 
-
+const bgImgStyle = {
+    backgroundImage :  `url(${bgImg})`
+}
 class SearchBooks extends Component {
 
     state = {
@@ -65,6 +68,7 @@ class SearchBooks extends Component {
     }
     render() {
         return (
+            <div className="searchBooksPage" style={bgImgStyle}>
             <Container fluid>
                 <Jumbotron>
                     <h1 className="text-white">Find Your Favorite Books with GoogleBook API</h1>
@@ -84,6 +88,7 @@ class SearchBooks extends Component {
                     <SearchResult books={this.state.books} handleSavedButton={this.handleSavedButton} />
                 </Container>
             </Container>
+            </div>
         )
     }
 
