@@ -71,7 +71,7 @@ class SearchBooks extends Component {
             <div className="searchBooksPage" style={bgImgStyle}>
             <Container fluid>
                 <Jumbotron>
-                    <h1 className="text-white">Find Your Favorite Books with GoogleBook API</h1>
+                    <h1 className="text-white">Find Your Favorite Books with GoogleBook </h1>
                 </Jumbotron>
                 <Container>
                     <Row>
