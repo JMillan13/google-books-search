@@ -3,7 +3,11 @@ import API from "../utils/API";
 import Jumbotron from "../components/Jumbotron";
 import { Container} from "../components/Grid";
 import SavedResult from "../components/SavedResults"
-const bg_color = {'backgroundColor' : 'd80001'}
+import bgImg from "../img/bgImg.jpg";
+
+const bgImgStyle = {
+    backgroundImage :  `url(${bgImg})`
+}
 class SaveBook extends Component {
     state = {
         savedBooks: []
@@ -25,7 +29,7 @@ class SaveBook extends Component {
 
     render() {
         return (
-            <div style={bg_color}>
+            <div className="searchBooksPage" style={bgImgStyle}>
             <Container fluid className="container">
                 <Jumbotron>
                 <h1 className="text-white">Saved Books</h1>
